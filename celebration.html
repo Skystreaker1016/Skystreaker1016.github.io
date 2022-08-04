@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Join the Celebration - Legacy of Koholint</title>
+	<style>
+        ::selection {
+            background-color: gold;
+            color: white;
+        }
+        body {
+            font-family: Montserrat, Helvetica, sans-serif;
+            background: linear-gradient(90deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 85%);
+        }
+
+        /* Style all links */
+        a {
+            text-decoration: none;
+            color: aliceblue;
+        }
+            #homepage-link {
+                color: darkslategrey;
+                font-size: 20px;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+            #back-arrow {
+                color: darkslategrey;
+                
+            }
+                #back-arrow:hover {
+                    text-decoration: none;
+                }
+
+            #title {
+                color: aliceblue;
+                top: 10px;
+                margin-bottom: 30px;
+            }
+            #descrip {
+                color: #202020;
+                margin-bottom: 60px;
+            }
+
+        /* Activity images */
+        .img {
+            width: 400px;
+        }
+            .img:hover {
+                cursor: pointer;
+            }
+        
+        /* Activity titles */
+        .activity-title {
+            font-weight: 700;
+            font-size: 24px;
+            color: aliceblue;
+        }
+
+        /* Div table */
+        .divTable{
+            display: table;
+            width: 800px;
+        }
+        .divTableRow {
+            display: table-row;
+        }
+        .divTableHeading {
+            background-color: #EEE;
+            display: table-header-group;
+        }
+        .divTableCell, .divTableHead {
+            border: none;
+            display: table-cell;
+            padding: 3px 10px;
+            vertical-align: top;
+            text-align: left;
+        }
+            .divTableCell_img {
+                border: none;
+                display: table-cell;
+                padding-right: 10px;
+                padding-bottom: 30px;
+                vertical-align: top;
+                text-align: left;
+            }
+        .divTableHeading {
+            background-color: #EEE;
+            display: table-header-group;
+            font-weight: bold;
+        }
+        .divTableFoot {
+            background-color: #EEE;
+            display: table-footer-group;
+            font-weight: bold;
+        }
+        .divTableBody {
+            display: table-row-group;
+        }
+	</style>
+    </head>
+    <body>
+        <center>
+            <!-- breadcrumb and title -->
+            <div class="divTable">
+                <div class="divTableBody">
+                    <!-- Back to home link -->
+                    <div class="divTableRow">
+                        <div class="divTableCell" style="width:100%">
+                            <a id="back-arrow" href="https://www.w3spaces-preview.com/skystreaker1016/Legacy-of-Koholint/slideshow-front-cover.html">&#9664;</a>&nbsp;<a id="homepage-link" href="https://www.w3spaces-preview.com/skystreaker1016/Legacy-of-Koholint/slideshow-front-cover.html">Home</a>
+                        </div>
+                    </div>
+
+                    <!-- Title and tagline -->
+                    <div class="divTableRow">
+                        <div class="divTableCell" style="width: 100%; text-align: center">
+                            <h1 id="title" class="div-header">JOIN THE CELEBRATION</h1>
+                            <p id="descrip" class="div-header">It's dangerous to go alone!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="divTable">
+                <div class="divTableBody">
+
+                    <!-- Welcome to the Shrine -->
+                    <div class="divTableRow">
+                        <div class="divTableCell_img"><img class="img" id="shrine-img" src="la-images/welcome_to_the_shrine_cover.png"></div>
+                        <div class="divTableCell" style="padding-top: 75px">
+                            <span class="activity-title"><a href="https://www.w3spaces-preview.com/skystreaker1016/Legacy-of-Koholint/welcome-to-the-shrine.html">WELCOME TO THE SHRINE</a></span><br><br>
+                            <span class="activity-descrip">An original documentary log of the Gamer's Group's adventures in <em>Zelda</em>, written solely by Elsie.</span>
+                        </div>
+                    </div>
+
+                    <!-- Official Recordings -->
+                    <div class="divTableRow">
+                        <div class="divTableCell_img"><img class="img" id="recording-img" src="la-images/2021_science_project_saltwater.png"></div>
+                        <div class="divTableCell" style="padding-top: 100px">
+                            <span class="activity-title"><a href="https://www.w3spaces-preview.com/skystreaker1016/Legacy-of-Koholint/official-recordings.html">OFFICIAL RECORDINGS</a></span><br><br>
+                            <span class="activity-descrip">Real-time OBS recordings of the Gamer's Group playing <em>Link's Awakening</em>.</span>
+                        </div>
+                    </div>
+
+                    <!-- Live Performances -->
+                    <div class="divTableRow">
+                        <div class="divTableCell_img"><img class="img" id="performance-img" src="la-images/elsie_ethan_singing_francesca_battistelli.png"></div>
+                        <div class="divTableCell" style="padding-top: 97px">
+                            <span class="activity-title"><a href = "https://www.w3spaces-preview.com/skystreaker1016/Legacy-of-Koholint/live-performances.html">LIVE PERFORMANCES</a></span><br><br>
+                            <span class="activity-descrip">Live music by the duo band Lofi Larry (Elsie and Ethan).</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </center>
+
+        <!-- Javascript Below -->
+        <script>
+            // Welcome to the Shrine image event listener
+            var welcomeImg = document.getElementById("shrine-img");
+            var onWelcomeClick = function() {
+                window.location.href = "https://www.w3spaces-preview.com/skystreaker1016/Legacy-of-Koholint/welcome-to-the-shrine.html";
+            }
+            welcomeImg.addEventListener("click", onWelcomeClick);
+
+            // Official Recordings image event listener
+            var recordingImg = document.getElementById("recording-img");
+            var onRecordClick = function() {
+                window.location.href = "https://www.w3spaces-preview.com/skystreaker1016/Legacy-of-Koholint/official-recordings.html";
+            }
+            recordingImg.addEventListener("click", onRecordClick);
+
+            // Live Performances image event listener
+            var performanceImg = document.getElementById("performance-img");
+            var onPerformanceClick = function() {
+                window.location.href = "https://www.w3spaces-preview.com/skystreaker1016/Legacy-of-Koholint/live-performances.html";
+            }
+            performanceImg.addEventListener("click", onPerformanceClick);
+        </script>
+    </body>
+</html>
