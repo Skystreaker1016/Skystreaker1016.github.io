@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Home - Legacy of Koholint</title>
+        <link rel="icon" type="image/x-icon" href="la-images/links-awakening-link-zoom-face.png">
+	<style>
+        ::selection {
+            background-color: gold;
+            color: white;
+        }
+        body {
+            background: linear-gradient(90deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 85%);
+        }
+        #title {
+            font-family: Montserrat, Helvetica, sans-serif;
+            color: aliceblue;
+            font-size: 30px;
+        }
+        #descrip {
+            font-family: Montserrat, Helvetica, sans-serif;
+            color: #202020;
+            font-size: 15px;
+            margin-bottom: 40px;
+        }
+        .slide-img {
+            width: 500px;
+            height: 300px;
+        }
+
+        /* Buttons */
+        .button {
+            border-radius: 30px;
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-top: 7px;
+            padding-bottom: 7px;
+            font-family: Montserrat, Helvetica, sans-serif;
+            font-weight: 600;
+            border: none;
+            color: white;
+            margin-top: 18px;
+        }
+            .button:hover {
+                cursor: pointer;
+            }
+            #celeb-button {
+                background-color: tomato;
+                margin-top: 30px;
+            }
+                #celeb-button:hover {
+                    background-color: orangered;
+                }
+            #about-button {
+                background-color: orange;
+            }
+                #about-button:hover {
+                    background-color: darkorange;
+                }
+	</style>
+    </head>
+    <body>
+        <center>
+        <h1 id="title">LEGACY OF KOHOLINT</h1>
+        <p id="descrip">Revisit <em>The Legend of Zelda: Link's Awakening</em>'s best moments.</p>
+        <div id="slideshow">
+            <img class="slide-img" src="https://sm.ign.com/ign_in/screenshot/default/links-awakening-2_67eb.jpg">
+            <img class="slide-img" src="https://asset.vg247.com/links_awakening_zelda_1.jpg/BROK/thumbnail/1600x900/quality/100/links_awakening_zelda_1.jpg">
+            <img class="slide-img" src="https://assets.nuuvem.com/image/upload/t_screenshot_full/v1/products/5e4a3423d597ec0fb1e130c9/screenshots/lqbjphprrjvqw3uq7cii.jpg">
+            <img class="slide-img" src="https://m.media-amazon.com/images/M/MV5BYzhhMjI4NmItNzY2Yy00MDJjLTg3OTAtMGViNDhmYjA5ZmQ5XkEyXkFqcGdeQTNwaW5nZXN0._V1_QL75_UX500_CR0,0,500,281_.jpg">
+            <img class="slide-img" src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6255/1486838021_ap.jpg">
+            <img class="slide-img" src="https://static1.srcdn.com/wordpress/wp-content/uploads/2021/06/zelda-links-awakening-instruments.jpg?q=50&fit=crop&w=963&h=481&dpr=1.5">
+            <img class="slide-img" src="https://i.kinja-img.com/gawker-media/image/upload/c_scale,f_auto,fl_progressive,pg_1,q_80,w_800/etloysrbpk1oc4ieik5d.png">
+            <img class="slide-img" src="https://oyster.ignimgs.com/mediawiki/apis.ign.com/the-legend-of-zelda-links-awakening/8/84/00-Figurine.jpg">
+            <img class="slide-img" src="https://cdn.pocket-lint.com/r/s/970x/assets/images/150005-games-review-the-legend-of-zelda-links-awakening-review-image1-5d124qg9yt.jpg">
+            <img class="slide-img" src="https://d1lss44hh2trtw.cloudfront.net/assets/article/2019/09/22/links-awakening-slime-eye_feature.jpg">
+            <img class="slide-img" src="https://twinfinite.net/wp-content/uploads/2019/09/2019091519102300-9129043EF2AAD7F1157CF852BACB8F7D-1.jpg">
+            <img class="slide-img" src="https://i0.wp.com/vgkami.com/wp-content/uploads/2022/04/2022012617462100-9129043EF2AAD7F1157CF852BACB8F7D.jpg?resize=1024%2C576&ssl=1">
+            <img class="slide-img" src="https://res.cloudinary.com/lmn/image/upload/c_limit,h_360,w_640/e_sharpen:100/f_auto,fl_lossy,q_auto/v1/gameskinnyc/l/i/n/links-awakening-how-get-ocarina-e4a47.png">
+        </div>
+
+        <!-- Buttons -->
+        <div><button class="button" id="celeb-button">Join the celebration</button></div>
+        
+        <div><button class="button" id="about-button">Our story</button></div>
+        </center>
+
+        <!-- Javascript Below -->
+        <script>
+            var slideShow = function(container) {
+                this.images = [];
+                this.curImage = 0;
+                for (i = 0; i < container.childElementCount; i++) {
+                    this.images.push(container.children[i]);
+                    this.images[i].style.display = "none";
+                }
+                
+                // Handle going to to the next slide
+                var nextSlide = function() {
+                    for (var i = 0; i < this.images.length; i++) {
+                        this.images[i].style.display = "none";
+                    }
+                    this.images[this.curImage].style.display = "block";
+                    this.curImage++;
+                    if (this.curImage >= this.images.length) {
+                        this.curImage = 0;
+                    }
+                    window.setTimeout(nextSlide.bind(this), 1000);
+                };
+                
+                nextSlide.call(this);
+            };
+
+            slideShow(document.getElementById("slideshow"))
+
+            // "Our Story" button event listener
+            var storyButton = document.getElementById("about-button")
+
+            var onStoryClick = function() {
+                window.location.href = "https://www.w3spaces-preview.com/skystreaker1016/Legacy-of-Koholint/our-story.html";
+            }
+
+            storyButton.addEventListener("click", onStoryClick);
+
+            // "Join the Celebration" button event listener
+            var celebButton = document.getElementById("celeb-button");
+
+            var onCelebClick = function() {
+                window.location.href = "https://www.w3spaces-preview.com/skystreaker1016/Legacy-of-Koholint/join-celebration.html";
+            }
+
+            celebButton.addEventListener("click", onCelebClick)
+        </script>
+    </body>
+</html>
